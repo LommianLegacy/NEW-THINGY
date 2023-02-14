@@ -1,3 +1,8 @@
+def Holding(p1card, p2card):
+
+    print("Player 1 has: " + str(p1card) +"\n)")
+    print("Player 2 has: " + str(p2card) +"\n)")
+
 import random
 deck = list(range(2,15))*4
 random.shuffle(deck)
@@ -8,16 +13,12 @@ pile = []
 
 while len(p1) != 0 or len(p1) != 0:
 
-
     p1card =p1.pop(0)
     p2card =p2.pop(0)
     pile.append(p1card)
     pile.append(p2card)
 
-
-    print("Player 1 has: " + str(p1card) +"\n)")
-    print("Player 2 has: " + str(p2card) +"\n)")
-
+    Holding(p1card, p2card)
 
     if p1card > p2card:
         print("Player 1 won")
@@ -37,5 +38,3 @@ while len(p1) != 0 or len(p1) != 0:
         print("war")
         pile.append(p1.pop(0))
         pile.append(p2.pop(0))
-
-
